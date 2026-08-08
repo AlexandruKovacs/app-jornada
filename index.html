@@ -318,19 +318,12 @@
 
   <section class="panel">
     <h2>Enviar por email</h2>
-    <p class="sub">Genera el Excel del año completo y lo envía como adjunto usando Resend, a través de tu backend.</p>
+    <p class="sub">Genera el Excel del año completo y lo envía como adjunto.</p>
 
     <form class="send-form" id="sendForm">
       <div>
         <label for="toEmail">Destinatario</label>
         <input type="email" id="toEmail" placeholder="persona@empresa.com" required>
-      </div>
-      <div>
-        <label for="endpoint">URL de tu backend de envío</label>
-        <input type="text" id="endpoint" placeholder="/api/send-email" value="/api/send-email" required>
-      </div>
-      <div class="note">
-        El envío no se hace desde el navegador: este formulario manda el Excel a una Netlify Function (<code>netlify/functions/send-email.js</code>) que lo envía por Gmail usando tu propia cuenta (Nodemailer), con las credenciales protegidas en el servidor. Se despliega junto con esta misma página — no hace falta backend aparte ni verificar ningún dominio.
       </div>
       <div>
         <button type="submit" class="btn btn-primary">Generar y enviar Excel</button>
