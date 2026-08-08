@@ -330,7 +330,7 @@
         <input type="text" id="endpoint" placeholder="/api/send-email" value="/api/send-email" required>
       </div>
       <div class="note">
-        Resend no admite el envío directo desde el navegador: su API bloquea peticiones CORS de origen cruzado y exponer la API key en el cliente sería inseguro. Este formulario envía el Excel a una Netlify Function (incluida en <code>netlify/functions/send-email.js</code>) que reenvía el correo a Resend con la API key protegida en el servidor. Se despliega junto con esta misma página — no hace falta backend aparte.
+        El envío no se hace desde el navegador: este formulario manda el Excel a una Netlify Function (<code>netlify/functions/send-email.js</code>) que lo envía por Gmail usando tu propia cuenta (Nodemailer), con las credenciales protegidas en el servidor. Se despliega junto con esta misma página — no hace falta backend aparte ni verificar ningún dominio.
       </div>
       <div>
         <button type="submit" class="btn btn-primary">Generar y enviar Excel</button>
